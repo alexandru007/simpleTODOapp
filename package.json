@@ -1,0 +1,13 @@
+{
+    "name": "simple-todo",
+    "version": "0.1.0",
+    "dependencies": {
+        "body-parser": "~1.10.1",
+        "cookie-session": "~1.1.0",
+        "ejs": "~2.1.4",
+        "express": "~4.11.0",
+        "nodemon": "^1.17.1"
+    },
+    "author": "Alex-Lisii",
+    "description": "this is a simple todo app using node.js, express.js, ejs template"
+}

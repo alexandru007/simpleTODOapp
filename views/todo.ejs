@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>todolist</title>
+        <style>
+            body {font: 14px; font-family: Arial, sans-serif}
+            a {text-decoration: none; color: black}
+            ul {list-style: none; margin-left: 0px;  padding-left: 0px}
+            .btn {width: 70px}
+            #content{background-color: bisque; padding: 20px; width: 300px}
+        </style>
+    </head>
+
+    <body>
+        <div id="content">
+            <h2>add soemthing</h2>
+
+            <form action="/add/" method="post">
+                <input type="text" name="newitem" autofocus />
+                <input type="submit" value="add task" class="btn" style="float: left" />
+            </form>
+            <ul>
+                <% myarray.forEach(function(todo, index) { %>
+                    <li><a href="/delete/<%= index %>"><button class="btn" type="button">delete</button></a><%= todo %></li>
+                <% }); %>
+            </ul>
+        </div>
+    </body>
+</html>
