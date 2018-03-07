@@ -46,5 +46,5 @@ app.get('*', function(req, res){
 });
 
 app.listen(3000, function(){
-    console.log("Listen on pot: " + 3000);
+    console.log("Listen on port: " + 3000);
 });
