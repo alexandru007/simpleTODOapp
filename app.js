@@ -7,7 +7,7 @@ var app = express();
 
 /* cookie-session to save the list using cookies */
 app.use(session({
-    name: "sessionName",
+    name: 'sessionName',
     secret: 'someSecretString'
 }));
 
@@ -29,6 +29,7 @@ app.post('/add', urlencodedParser, function(req, res) {
         req.session.todolist.push(req.body.newitem);
     }
 
+    /* redirect to home */
     res.redirect('/');
 });
 
@@ -40,8 +41,10 @@ app.get('/delete/:id', function(req, res) {
     res.redirect('/');
 });
 
-/* redirect to home */
+/* any route that is not defined */
 app.get('*', function(req, res){
+
+    /* redirect to home */
     res.redirect('/');
 });
 
